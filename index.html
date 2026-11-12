@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lockdown Help and Privacy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  /* Layout: one reading column, a stencilled header like a cell-block sign, two sections reached by anchors. */
+  :root {
+    --bg: #f4f5f6;
+    --panel: #ffffff;
+    --fg: #1d2228;
+    --muted: #5b6470;
+    --line: #d9dde2;
+    --accent: #c98400;
+    --accent-ink: #1d1600;
+    --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+    --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171b; --panel: #1c2026; --fg: #e8ecef; --muted: #9aa5b1; --line: #2c323a; --accent: #ffb224; --accent-ink: #1d1600; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171b; --panel: #1c2026; --fg: #e8ecef; --muted: #9aa5b1; --line: #2c323a; --accent: #ffb224; --accent-ink: #1d1600; color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.6 var(--body);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 32px 64px;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; display: grid; gap: 40px; }
+  header { display: grid; gap: 12px; }
+  .sign {
+    justify-self: start;
+    font: 700 0.85rem/1 var(--display);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: repeating-linear-gradient(-45deg, var(--accent) 0 14px, #1d2228 14px 22px);
+    padding: 6px 4px;
+  }
+  .sign span { background: var(--accent); padding: 4px 10px; }
+  h1 { font: 700 clamp(2.6rem, 8vw, 3.6rem)/0.95 var(--display); letter-spacing: 0.01em; margin: 0; text-wrap: balance; }
+  .lede { margin: 0; color: var(--muted); max-width: 36rem; }
+  nav { display: flex; flex-wrap: wrap; gap: 10px; }
+  nav a {
+    font: 600 1.05rem/1 var(--display); letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--fg); text-decoration: none; border: 1.5px solid var(--line); padding: 10px 14px; border-radius: 4px;
+  }
+  nav a:hover, nav a:focus-visible { border-color: var(--accent); outline: none; }
+  section { display: grid; gap: 14px; }
+  h2 { font: 700 2rem/1 var(--display); margin: 0; padding-top: 8px; border-top: 3px solid var(--accent); text-wrap: balance; }
+  h3 { font: 600 1.15rem/1.3 var(--body); margin: 12px 0 0; }
+  p, ul { margin: 0; }
+  ul { padding-left: 1.2em; display: grid; gap: 6px; }
+  .meta { color: var(--muted); font-size: 0.95rem; }
+  .box { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; display: grid; gap: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.97rem; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font: 600 0.8rem/1.2 var(--body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .scroll { overflow-x: auto; }
+  .email { font-weight: 600; user-select: all; overflow-wrap: anywhere; }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  footer { color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="sign"><span>Block H · Visitors' office</span></div>
+    <h1>Lockdown: Prison Builder</h1>
+    <p class="lede">Help for players, and what happens to your data.</p>
+    <nav aria-label="On this page">
+      <a href="#support">Help</a>
+      <a href="#privacy">Privacy policy</a>
+    </nav>
+  </header>
+
+  <section id="support" aria-labelledby="support-title">
+    <h2 id="support-title">Help</h2>
+    <div class="box">
+      <p><strong>Contact</strong></p>
+      <p>Email <span class="email" id="support-email">zigmas.marketing@gmail.com</span>. Say which iPhone you have and what you were doing when the problem happened.</p>
+    </div>
+    <h3>I bought the full game but it is locked again</h3>
+    <p>Open Settings in the game and tap <strong>Restore a purchase</strong>. Use the same Apple Account you bought it with. The full game then unlocks on this device.</p>
+
+    <h3>What does the free version include?</h3>
+    <p>Up to 20 prisoners, the first wave of research, minimum and normal security prisoners, the first five grants, and every speed except the fastest. One purchase unlocks everything else. There are no ads and nothing else for sale.</p>
+
+    <h3>Where are my saved prisons?</h3>
+    <p>On your phone only. The game keeps your current prison, a few earlier copies, and the prisons you save yourself. Deleting the app deletes them, and they do not move to a new phone.</p>
+
+    <h3>I want a refund</h3>
+    <p>Apple handles payments and refunds. Request one at <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</p>
+
+    <h3>The game is slow or my phone gets warm</h3>
+    <p>Large prisons work the phone hard. Play at normal speed, close other apps, and keep the phone out of direct sun.</p>
+  </section>
+
+  <section id="privacy" aria-labelledby="privacy-title">
+    <h2 id="privacy-title">Privacy policy</h2>
+    <p class="meta">In effect from 12 November 2026.</p>
+    <p>Lockdown has no accounts, no ads, no analytics and no tracking. Almost everything stays on your phone. The one exception is the purchase of the full game.</p>
+
+    <h3>What the game keeps on your phone</h3>
+    <p>Your prisons, settings and whether you own the full game are stored on your device. They are never sent to us.</p>
+
+    <h3>What leaves your phone</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>What</th><th>Sent to</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>A random ID made by the game, not your name or Apple Account</td><td>RevenueCat, the service that checks purchases</td><td>To know whether this device has unlocked the full game</td></tr>
+          <tr><td>Your purchase record (product, date, price)</td><td>RevenueCat</td><td>To unlock and restore the full game</td></tr>
+          <tr><td>Payment</td><td>Apple only</td><td>Apple takes the payment. We never see your card or Apple Account details.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>This data is used only to make the purchase work. It is not linked to who you are, not sold, not shared with advertisers and not used to track you across apps or websites. RevenueCat's own privacy policy is at <a href="https://www.revenuecat.com/privacy" rel="noopener">revenuecat.com/privacy</a>.</p>
+
+    <h3>What we do not collect</h3>
+    <ul>
+      <li>Your name, email, phone number or address</li>
+      <li>Your location, contacts, photos or microphone</li>
+      <li>How you play, crash reports or usage statistics</li>
+    </ul>
+
+    <h3>Children</h3>
+    <p>Lockdown is not aimed at young children. We do not knowingly collect anything from anyone under 13.</p>
+
+    <h3>Deleting your data</h3>
+    <p>Delete the app to remove everything stored on your phone. The purchase record held by RevenueCat holds no name or contact details. To have it removed, email zigmas.marketing@gmail.com with the date of your purchase; you may then need to restore the purchase again.</p>
+
+    <h3>Changes</h3>
+    <p>If this policy changes, the new version will be posted on this page with a new date.</p>
+  </section>
+
+  <footer>Lockdown: Prison Builder for iPhone.</footer>
+</div>
+</body>
+</html>
